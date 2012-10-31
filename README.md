@@ -24,11 +24,10 @@ Next I define the variable CI as the confidence interval. It is currently set to
 between 0-1.
 The next few lines solve for the normal random variable corresponding to the denoted confidence interval. I'm actually 
 quite proud of this part. Initially my code made the user look up the normal random variable, but this allows for much
-easier use. The drawback is that the solver is not as accurate as many literature sources or other solvers. This error
-increases the closer you get to the extremes of the function's range (0 and 1). At .95, the value was off by ~.7%, which
-is acceptable for most calculations, but at .99 the solver was off by ~11.4%, which is significant for many systems.
-I hope to try some of the other solvers before I turn htis in to optimize. Also, this is assuming a standard normal
-distribution. If a different distribution is required, this equation and possibly the solver must be changed.
+easier use. The drawback is that the solver is not quite as accurate as many literature sources or other solvers. At .95,
+the value was off by ~.7%, which is acceptable for most calculations. At .99 the solver was off by ~.6%, which should 
+still be acceptable. Also, this is assuming a standard normal distribution. If a different distribution is required, 
+this equation and possibly the solver must be changed.
 Next I define the variable that is used in the EOS fit for future use.
 The next few lines are used to calculate the bulk modulus (labelled BM *snicker) using the same methods as the EOS.
 The difference here is that I now have a vector of the bulk modulus that corresponds to each value of the volume and 
